@@ -1,0 +1,102 @@
+# Project: Polis
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = graph_private.res
+OBJ  = main.o class/Battalion.o class/Citizen.o class/Polis.o class/Soldier.o class/Archer.o class/Lancer.o class/Knave.o class/Knight.o class/Peltast.o class/Hoplite.o class/Pezhetairos.o class/Worker.o class/Barrack.o class/Cave.o class/Edifice.o class/Farm.o class/Mine.o class/Temple.o class/Wall.o class/Player.o class/Library.o class/cpuPlayer.o cpuMain.o $(RES)
+LINKOBJ  = main.o class/Battalion.o class/Citizen.o class/Polis.o class/Soldier.o class/Archer.o class/Lancer.o class/Knave.o class/Knight.o class/Peltast.o class/Hoplite.o class/Pezhetairos.o class/Worker.o class/Barrack.o class/Cave.o class/Edifice.o class/Farm.o class/Mine.o class/Temple.o class/Wall.o class/Player.o class/Library.o class/cpuPlayer.o cpuMain.o $(RES)
+LIBS =  -L"C:/Program Files/Dev-Cpp/lib" -L. -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -lwinmm  
+INCS =  -I"C:/Program Files/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Program Files/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Program Files/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Program Files/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Program Files/Dev-Cpp/include/c++/3.4.2"  -I"C:/Program Files/Dev-Cpp/include" 
+BIN  = graph.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before graph.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "graph.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+class/Battalion.o: class/Battalion.cpp
+	$(CPP) -c class/Battalion.cpp -o class/Battalion.o $(CXXFLAGS)
+
+class/Citizen.o: class/Citizen.cpp
+	$(CPP) -c class/Citizen.cpp -o class/Citizen.o $(CXXFLAGS)
+
+class/Polis.o: class/Polis.cpp
+	$(CPP) -c class/Polis.cpp -o class/Polis.o $(CXXFLAGS)
+
+class/Soldier.o: class/Soldier.cpp
+	$(CPP) -c class/Soldier.cpp -o class/Soldier.o $(CXXFLAGS)
+
+class/Archer.o: class/Archer.cpp
+	$(CPP) -c class/Archer.cpp -o class/Archer.o $(CXXFLAGS)
+
+class/Lancer.o: class/Lancer.cpp
+	$(CPP) -c class/Lancer.cpp -o class/Lancer.o $(CXXFLAGS)
+
+class/Knave.o: class/Knave.cpp
+	$(CPP) -c class/Knave.cpp -o class/Knave.o $(CXXFLAGS)
+
+class/Knight.o: class/Knight.cpp
+	$(CPP) -c class/Knight.cpp -o class/Knight.o $(CXXFLAGS)
+
+class/Peltast.o: class/Peltast.cpp
+	$(CPP) -c class/Peltast.cpp -o class/Peltast.o $(CXXFLAGS)
+
+class/Hoplite.o: class/Hoplite.cpp
+	$(CPP) -c class/Hoplite.cpp -o class/Hoplite.o $(CXXFLAGS)
+
+class/Pezhetairos.o: class/Pezhetairos.cpp
+	$(CPP) -c class/Pezhetairos.cpp -o class/Pezhetairos.o $(CXXFLAGS)
+
+class/Worker.o: class/Worker.cpp
+	$(CPP) -c class/Worker.cpp -o class/Worker.o $(CXXFLAGS)
+
+class/Barrack.o: class/Barrack.cpp
+	$(CPP) -c class/Barrack.cpp -o class/Barrack.o $(CXXFLAGS)
+
+class/Cave.o: class/Cave.cpp
+	$(CPP) -c class/Cave.cpp -o class/Cave.o $(CXXFLAGS)
+
+class/Edifice.o: class/Edifice.cpp
+	$(CPP) -c class/Edifice.cpp -o class/Edifice.o $(CXXFLAGS)
+
+class/Farm.o: class/Farm.cpp
+	$(CPP) -c class/Farm.cpp -o class/Farm.o $(CXXFLAGS)
+
+class/Mine.o: class/Mine.cpp
+	$(CPP) -c class/Mine.cpp -o class/Mine.o $(CXXFLAGS)
+
+class/Temple.o: class/Temple.cpp
+	$(CPP) -c class/Temple.cpp -o class/Temple.o $(CXXFLAGS)
+
+class/Wall.o: class/Wall.cpp
+	$(CPP) -c class/Wall.cpp -o class/Wall.o $(CXXFLAGS)
+
+class/Player.o: class/Player.cpp
+	$(CPP) -c class/Player.cpp -o class/Player.o $(CXXFLAGS)
+
+class/Library.o: class/Library.cpp
+	$(CPP) -c class/Library.cpp -o class/Library.o $(CXXFLAGS)
+
+class/cpuPlayer.o: class/cpuPlayer.cpp
+	$(CPP) -c class/cpuPlayer.cpp -o class/cpuPlayer.o $(CXXFLAGS)
+
+cpuMain.o: cpuMain.cpp
+	$(CPP) -c cpuMain.cpp -o cpuMain.o $(CXXFLAGS)
+
+graph_private.res: graph_private.rc 
+	$(WINDRES) -i graph_private.rc --input-format=rc -o graph_private.res -O coff 
