@@ -30,7 +30,7 @@ Battalion::Battalion(int pez,int l,int kna,int hop,int kni,int a,int pel,vector 
     makeSoldier<Knave>(kna,s,2);
     makeSoldier<Hoplite>(hop,s,3);
     makeSoldier<Knight>(kni,s,4);
-    makeSoldier<Archer>(a,s,5);b
+    makeSoldier<Archer>(a,s,5);
     makeSoldier<Peltast>(pel,s,6);
 }
 
